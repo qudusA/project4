@@ -1,0 +1,233 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;1,100&family=Roboto:wght@100&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: poppins, sans-serif;
+  box-sizing: border-box;
+}
+
+.search {
+  position: relative;
+  height: 40vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.search img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+}
+
+.search .content {
+  position: relative;
+  z-index: 2;
+  color: #fff;
+  text-align: center;
+}
+
+.search .content h1 {
+  font-size: 2.65rem;
+  font-weight: 600;
+}
+
+.search .content p {
+  font-size: 1.5rem;
+  margin-top: 8px;
+}
+
+.search .content .search-box {
+  height: 65px;
+  width: 1000px;
+  margin: 55px 0;
+  position: relative;
+}
+
+.search-box i {
+  position: absolute;
+  left: 20px;
+  top: 50%;
+  /* transform: translateY(0%); */
+  color: #000;
+  font-size: 2rem;
+  opacity: 0.5;
+}
+
+input,
+button,
+i {
+  border: none;
+  outline: none;
+  border-radius: 5px;
+}
+
+.search-box input {
+  width: 100%;
+  height: 100%;
+  padding: 50px 60px;
+  font-size: 1.1rem;
+}
+
+.gallery {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.gallery .images {
+  gap: 15px;
+  columns: 5 340px;
+  margin-top: 40px;
+  max-width: 95%;
+}
+
+.gallery .images .card {
+  display: flex;
+  list-style-type: none;
+  margin-bottom: 14px;
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+}
+
+.images img {
+  width: 100%;
+}
+
+.gallery .images .card .details {
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  bottom: -100px;
+  width: 100%;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+  padding: 15px 30px;
+  align-items: center;
+  transition: all 0.4s ease;
+}
+
+.gallery .images .card:hover .details {
+  bottom: 0px;
+}
+
+.gallery .images .card .details .photographer {
+  color: #fff;
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+}
+
+.gallery .images .card .details .photographer i {
+  color: #fff;
+  font-size: 3rem;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.gallery .images .card .details .photographer span {
+  font-size: 1.6rem;
+}
+
+.gallery .images .card .details button {
+  background-color: #fff;
+  /* color: #fff; */
+  font-size: 1.8rem;
+  padding: 3px 8px;
+  cursor: pointer;
+}
+
+.gallery .load-more {
+  margin: 50px;
+  font-size: 1.1rem;
+  background: #8a6cff;
+  padding: 12px 27px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.lightbox {
+  position: fixed;
+  z-index: 5;
+  background: rgba(0, 0, 0, 0.7);
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+
+.lightbox.show {
+  display: block;
+}
+
+.lightbox .wrapper {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 100%;
+  padding: 20px;
+  max-width: 850px;
+  background-color: #fff;
+  border-radius: 5px;
+  transform: translate(-50%, -50%);
+}
+
+.lightbox .wrapper header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.lightbox .wrapper header .photographer {
+  display: flex;
+  align-items: center;
+}
+
+.lightbox .wrapper header .photographer i {
+  font-size: 1.7rem;
+}
+
+.lightbox .wrapper header .photographer span {
+  font-size: 1.3rem;
+  margin-left: 10px;
+}
+
+/* .lightbox .wrapper header .buttons{
+    display: flex;
+    align-items: center;
+    font-size: 1.7rem;
+} */
+
+.lightbox .wrapper header .buttons i {
+  width: 40px;
+  height: 40px;
+  color: #fff;
+  background: #8a6cff;
+  font-size: 2rem;
+  display: inline-block;
+  text-align: center;
+  line-height: 40px;
+  /* padding: 5px; */
+}
+
+.lightbox .wrapper header .buttons i:last-child {
+  margin-left: 10px;
+  background-color: #6c757d;
+}
+
+.lightbox .wrapper .preview-img {
+  display: flex;
+  justify-content: center;
+  margin-top: 25px;
+}
+
+.lightbox .wrapper .preview-img .img {
+  max-height: 65vh;
+  max-width: 90vw;
+}
+
+.lightbox .wrapper .preview-img .img img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
